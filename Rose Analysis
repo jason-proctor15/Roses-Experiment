@@ -313,8 +313,11 @@ Output : Tukey comparison
 ---
 #### R code
 
-#### I. Balanced Incomplete Block Design for $2^4$ factorial design 
 ```{r warning=FALSE, eval = FALSE}
+
+
+
+########## I. Balanced Incomplete Block Design for $2^4$ factorial design Code
 A <- rep(c(-1,1), times=8)
 B <- rep(c(-1,1), each = 2, times=4)
 C <- rep(c(-1,1), each = 4, times=2)
@@ -364,11 +367,11 @@ bartlett.test(gaov$residuals~D)
 library(car)
 leveneTest(y ~ as.factor(A)*as.factor(B)*as.factor(D)) 
 leveneTest(y ~ as.factor(A)*as.factor(B)) 
-```
 
-#### II. RCBD
 
-```{r, eval = FALSE}
+
+
+########## II. RCBD Code
 I <- c(1,4.5,2.5,10)
 II <- c(1.7,1.9,4.5,7.5)
 y <- c(I,II)
